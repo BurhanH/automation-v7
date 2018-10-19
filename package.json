@@ -1,0 +1,14 @@
+{
+  "name": "automaton-v7",
+  "version": "1.0.0",
+  "description": "Automation framework (UI) - an example. Based on JavaScript, Selenium, Mocha",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Baur Urazalinov",
+  "license": "MIT",
+  "dependencies": {
+    "mocha": "^5.2.0",
+    "selenium-webdriver": "^4.0.0-alpha.1"
+  }
+}
