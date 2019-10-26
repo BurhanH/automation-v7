@@ -1,33 +1,65 @@
 const assert = require("assert");
 const {Builder} = require("selenium-webdriver");
-let driver;
-const TIMEOUT = 10000; // milliseconds
 
-function getDriver() {
-    driver = new Builder().forBrowser("firefox").build();
-    driver.manage().setTimeouts({implicit: TIMEOUT});
-    driver.manage().window().setRect({width: 1280, height: 1024});
+const config = require('../config.js');
 
-}
-
-function closeDriver() {
-    if (driver){
-        driver.close();
+function createDriver(browser, grid = false) {
+    /**
+     * 
+     */
+    let driver;
+    if (browser === 'chrome' || browser === 'firefox') {
+        if (grid === true) {
+            driver = new Builder()
+            .usingServer(config.grid_url)
+            .forBrowser(browser)
+            .build();
+        } else {
+          driver = new Builder()
+            .forBrowser(browser)
+            .build();
+        }
+        driver
+          .manage()
+          .setTimeouts({ implicit: config.timeout });
+        driver
+          .manage()
+          .window()
+          .setRect({ width: 1280, height: 1024 });
+      } else {
+        console.log(`Unknown '${browser}' browser`);
+      }
+    return driver;
     }
-}
 
-describe("Browser resolution", function () {
-   this.timeout(0); // Turning off mocha timeout for whole suite
-   describe("test resolution 800x600", function () {
-       it("resolution is set", async function () {
-           let setWidth = 800;
-           let setHeight = 600;
-           await getDriver();
-           await driver.manage().window().setRect({width: setWidth, height: setHeight});
-           let {width, height} = await driver.manage().window().getRect();
-           assert(width === setWidth, "Expected width " + setWidth);
-           assert(height === setHeight, "Expected height " + setHeight);
-           await closeDriver();
-       });
+describe("Browser testing", () => {
+   
+   beforeEach(async () => {
+       webdriver = await createDriver(config.browser, config.grid);
+   });
+
+    it("test resolution 800x600", async () => {
+        let setWidth = 800;
+        let setHeight = 600;
+        await webdriver.manage().window().setRect({width: setWidth, height: setHeight});
+        let {width, height} = await webdriver.manage().window().getRect();
+        assert(width === setWidth, "Expected width " + setWidth + " actual is " + width);
+        assert(height === setHeight, "Expected height " + setHeight + " actual is " + height);
+     });
+
+     it("test resolution 1280X1024", async () => {
+        let setWidth = 1280;
+        let setHeight = 1024;
+        await webdriver.manage().window().setRect({width: setWidth, height: setHeight});
+        let {width, height} = await webdriver.manage().window().getRect();
+        assert(width === setWidth, "Expected width " + setWidth + " actual is " + width);
+        assert(height === setHeight, "Expected height " + setHeight + " actual is " + height);
+     });
+
+    afterEach(async () => {
+        if (webdriver) {
+            await webdriver.quit();
+        }
     });
+
 });
