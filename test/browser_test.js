@@ -32,7 +32,9 @@ function createDriver(browser, grid = false) {
     return driver;
     }
 
-describe("Browser testing", () => {
+describe("Browser testing", function () {
+   this.timeout(0);
+   let webdriver;
    
    beforeEach(async () => {
        webdriver = await createDriver(config.browser, config.grid);
