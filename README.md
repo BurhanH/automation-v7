@@ -9,7 +9,13 @@ Automation framework (UI) - an example. Based on JavaScript, Selenium, Mocha
 ## Requirements
 NodeJS 13.0.1, Selenium 4.0.0, Mocha 6.2.2, <br>
 npm (package manager), <br>
-Firefox 70.\*, geckodriver 0.26.0 <br> 
+Firefox 70.\*, geckodriver 0.26.0 <br>
+Chrome 77.0.3865.120, chromedriver 77.0.3865.40 <br>
+
+## Features
+1. Supports Firefox and Chrome browsers
+2. Supports Selenium Grid
+3. Easy to extend 
 
 ## Project structure
 ```text
@@ -20,6 +26,7 @@ Firefox 70.\*, geckodriver 0.26.0 <br>
    |-- LICENSE
    |-- package.json
    |-- README.md
+   |-- config.js
    `-- test
        |-- browser_test.js
        |-- initial_test.js
