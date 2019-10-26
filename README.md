@@ -7,7 +7,7 @@ Automation framework (UI) - an example. Based on JavaScript, Selenium, Mocha
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/7d7a89d0f1574f5a9f4afd9073643edf)](https://app.codacy.com/app/BurhanH/automaton-v7?utm_source=github.com&utm_medium=referral&utm_content=BurhanH/automaton-v7&utm_campaign=Badge_Grade_Dashboard)
 
 ## Requirements
-NodeJS 13.0.1, Selenium 4.0.0, Mocha 5.2.0, <br>
+NodeJS 13.0.1, Selenium 4.0.0, Mocha 6.2.2, <br>
 npm (package manager), <br>
 Firefox 70.\*, geckodriver 0.26.0 <br> 
 
