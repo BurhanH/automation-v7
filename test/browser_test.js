@@ -1,17 +1,17 @@
 const assert = require("assert");
 const {Builder} = require("selenium-webdriver");
 
-const config = require('../config.js');
+const config = require("../config.js");
 
 function createDriver(browser, grid = false) {
     /**
      * 
      */
     let driver;
-    if (browser === 'chrome' || browser === 'firefox') {
+    if (browser === "chrome" || browser === "firefox") {
         if (grid === true) {
             driver = new Builder()
-            .usingServer(config.grid_url)
+            .usingServer(config.gridUrl)
             .forBrowser(browser)
             .build();
         } else {
@@ -27,7 +27,7 @@ function createDriver(browser, grid = false) {
           .window()
           .setRect({ width: 1280, height: 1024 });
       } else {
-        console.log(`Unknown '${browser}' browser`);
+        console.log("Unknown '${browser}' browser");
       }
     return driver;
     }
