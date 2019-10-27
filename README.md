@@ -13,9 +13,9 @@ Firefox 70.\*, geckodriver 0.26.0 <br>
 Chrome 77.0.3865.120, chromedriver 77.0.3865.40 <br>
 
 ## Features
-1. Supports Firefox and Chrome browsers
-2. Supports Selenium Grid
-3. Easy to extend 
+1.  Supports Firefox and Chrome browsers
+2.  Supports Selenium Grid
+3.  Easy to extend 
 
 ## Project structure
 ```text
