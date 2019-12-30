@@ -1,5 +1,5 @@
 const assert = require("assert");
-const {Builder} = require("selenium-webdriver");
+const { Builder } = require("selenium-webdriver");
 
 const config = require("../config.js");
 
