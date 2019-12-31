@@ -8,7 +8,7 @@ Automation testing framework (UI) - an example. Based on JavaScript, Selenium, M
 
 ## Requirements
 NodeJS 13.5.0, Selenium 4.0.0, Mocha 6.2.2, <br>
-Firefox 71.\*, geckodriver 0.26.0 <br>
+Firefox 71.\*, geckodriver 0.26.0, <br>
 Chrome 79.0.3945.88, chromedriver 79.0.3945.88 <br>
 
 ## Features
