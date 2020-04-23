@@ -50,7 +50,7 @@ describe("Browser testing", function () {
           await webdriver.manage().window().setRect({width: test.width, height: test.height});
           let {width, height} = await webdriver.manage().window().getRect();
           assert(width === test.width, "Expected width " + test.width + " actual is " + width);
-          assert(height === test.width, "Expected height " + test.width + " actual is " + height);
+          assert(height === test.height, "Expected height " + test.height + " actual is " + height);
         });
       });
     });
