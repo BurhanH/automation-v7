@@ -39,7 +39,22 @@ describe("Browser testing", function () {
    beforeEach(async () => {
        webdriver = await createDriver(config.browser, config.grid);
    });
-
+    
+    describe('Test resolution', function() {
+      const testData = [
+        {width: 800, height: 600}
+      ];
+      
+      testData.forEach(function(test) {
+        it(test.width + 'x' + test.height, async () => {
+          await webdriver.manage().window().setRect({width: test.width, height: test.height});
+          let {width, height} = await webdriver.manage().window().getRect();
+          assert(width === test.width, "Expected width " + test.width + " actual is " + width);
+          assert(height === test.width, "Expected height " + test.width + " actual is " + height);
+        });
+      });
+    });
+    
     it("test resolution 800x600", async () => {
         let setWidth = 800;
         let setHeight = 600;
