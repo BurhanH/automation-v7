@@ -8,8 +8,8 @@ Automation testing framework (UI) - an example. Based on JavaScript, Selenium, M
 
 ## Requirements
 NodeJS 13.5.0, Selenium 4.0.0, Mocha 6.2.2, <br>
-Firefox 71.\*, geckodriver 0.26.0, <br>
-Chrome 79.0.3945.88, chromedriver 79.0.3945.88 <br>
+Firefox 75.0, geckodriver 0.26.0, <br>
+Chrome 81.0.4044.122, chromedriver 81.0.4044.69 <br>
 
 ## Features
 1.  Supports Firefox and Chrome browsers
@@ -31,13 +31,12 @@ Chrome 79.0.3945.88, chromedriver 79.0.3945.88 <br>
        |-- initial_test.js
 ```
 
-## Documentation and Distributives
-
-1.  [selenium.dev](https://selenium.dev/documentation/en/)
-2.  [selenium api for java script](https://selenium.dev/selenium/docs/api/javascript/index.html)
-3.  [nodejs](https://nodejs.org/en/)
-4.  [mocha](https://mochajs.org/)
-5.  [firefox](https://www.mozilla.org/en-US/firefox/)
-6.  [geckodriver](https://github.com/mozilla/geckodriver/releases)
-7.  [chrome](https://www.google.com/chrome/)
-8.  [chromedriver](https://chromedriver.chromium.org/)
+## Techology stack and documentation
+[Node.js](https://nodejs.org/en/) <br>
+[mocha](https://mochajs.org/) <br>
+[Selenium](https://selenium.dev/documentation/en/) <br>
+[selenium api for java script](https://selenium.dev/selenium/docs/api/javascript/index.html) <br>
+[Firefox](https://www.mozilla.org/en-US/firefox/) <br>
+[geckodriver](https://github.com/mozilla/geckodriver/releases) <br>
+[Chrome](https://www.google.com/chrome/) <br>
+[ChromeDriver](https://chromedriver.chromium.org/downloads) <br>
