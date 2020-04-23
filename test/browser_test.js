@@ -42,7 +42,11 @@ describe("Browser testing", function () {
     
     describe('Test resolution', function() {
       const testData = [
-        {width: 800, height: 600}
+        {width: 800, height: 600},
+        {width: 1280, height: 1024},
+        {width: 1600, height: 1200},
+        {width: 1680, height: 1050},
+        {width: 1900, height: 1200}
       ];
       
       testData.forEach(function(test) {
@@ -54,51 +58,6 @@ describe("Browser testing", function () {
         });
       });
     });
-    
-    it("test resolution 800x600", async () => {
-        let setWidth = 800;
-        let setHeight = 600;
-        await webdriver.manage().window().setRect({width: setWidth, height: setHeight});
-        let {width, height} = await webdriver.manage().window().getRect();
-        assert(width === setWidth, "Expected width " + setWidth + " actual is " + width);
-        assert(height === setHeight, "Expected height " + setHeight + " actual is " + height);
-     });
-
-     it("test resolution 1280x1024", async () => {
-        let setWidth = 1280;
-        let setHeight = 1024;
-        await webdriver.manage().window().setRect({width: setWidth, height: setHeight});
-        let {width, height} = await webdriver.manage().window().getRect();
-        assert(width === setWidth, "Expected width " + setWidth + " actual is " + width);
-        assert(height === setHeight, "Expected height " + setHeight + " actual is " + height);
-     });
-    
-     it("test resolution 1600x1200", async () => {
-        let setWidth = 1600;
-        let setHeight = 1200;
-        await webdriver.manage().window().setRect({width: setWidth, height: setHeight});
-        let {width, height} = await webdriver.manage().window().getRect();
-        assert(width === setWidth, "Expected width " + setWidth + " actual is " + width);
-        assert(height === setHeight, "Expected height " + setHeight + " actual is " + height);
-     });
-    
-     it("test resolution 1680x1050", async () => {
-        let setWidth = 1680;
-        let setHeight = 1050;
-        await webdriver.manage().window().setRect({width: setWidth, height: setHeight});
-        let {width, height} = await webdriver.manage().window().getRect();
-        assert(width === setWidth, "Expected width " + setWidth + " actual is " + width);
-        assert(height === setHeight, "Expected height " + setHeight + " actual is " + height);
-     });
-    
-     it("test resolution 1900x1200", async () => {
-        let setWidth = 1900;
-        let setHeight = 1200;
-        await webdriver.manage().window().setRect({width: setWidth, height: setHeight});
-        let {width, height} = await webdriver.manage().window().getRect();
-        assert(width === setWidth, "Expected width " + setWidth + " actual is " + width);
-        assert(height === setHeight, "Expected height " + setHeight + " actual is " + height);
-     });
 
     afterEach(async () => {
         if (webdriver) {
