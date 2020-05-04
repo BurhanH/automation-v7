@@ -34,7 +34,7 @@ function createDriver(browser, grid = false) {
 
 describe("Browser testing", function () {
    this.timeout(0);
-   let webdriver;
+   let webdriver = undefined;
    
    beforeEach(async () => {
        webdriver = await createDriver(config.browser, config.grid);
@@ -61,6 +61,7 @@ describe("Browser testing", function () {
     afterEach(async () => {
         if (webdriver) {
             await webdriver.close();
+            webdriver = undefined;
         }
     });
 
