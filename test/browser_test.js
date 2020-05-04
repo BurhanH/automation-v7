@@ -40,7 +40,7 @@ describe("Browser testing", function () {
        webdriver = await createDriver(config.browser, config.grid);
    });
     
-    describe('Test resolution', function() {
+    describe("Test resolution", function() {
       const testData = [
         {width: 800, height: 600},
         {width: 1280, height: 1024},
@@ -59,7 +59,7 @@ describe("Browser testing", function () {
     });
 
     afterEach(async () => {
-        if (webdriver != undefined) {
+        if (webdriver !== undefined) {
             await webdriver.close();
             webdriver = null;
         }
