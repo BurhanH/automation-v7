@@ -59,7 +59,7 @@ describe("Browser testing", function () {
     });
 
     afterEach(async () => {
-        if (webdriver !== undefined) {
+        if (webdriver) {
             await webdriver.close();
             webdriver = null;
         }
