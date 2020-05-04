@@ -49,7 +49,7 @@ describe("Browser testing", function () {
       ];
       
       testData.forEach(function(test) {
-        it(test.width + 'x' + test.height, async () => {
+        it(test.width + "x" + test.height, async () => {
           await webdriver.manage().window().setRect({width: test.width, height: test.height});
           let {width, height} = await webdriver.manage().window().getRect();
           assert(width === test.width, "Expected width " + test.width + " actual is " + width);
