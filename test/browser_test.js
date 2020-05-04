@@ -60,7 +60,7 @@ describe("Browser testing", function () {
 
     afterEach(async () => {
         if (webdriver) {
-            await webdriver.quit();
+            await webdriver.close();
         }
     });
 
