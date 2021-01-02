@@ -33,7 +33,7 @@ Chrome 81.0.4044.122, chromedriver 81.0.4044.69 <br>
        |-- initial_test.js
 ```
 
-## Techology stack and documentation
+## Technology stack and documentation
 [Node.js](https://nodejs.org/en/) <br>
 [mocha](https://mochajs.org/) <br>
 [Selenium](https://selenium.dev/documentation/en/) <br>
