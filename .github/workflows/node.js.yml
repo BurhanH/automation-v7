@@ -35,6 +35,7 @@ jobs:
     - run: npm test
     - name: Archive code coverage results
       uses: actions/upload-artifact@v2
+      if: success() || failure()
       with:
         name: geckodriver-log
         path: geckodriver.log
