@@ -33,3 +33,8 @@ jobs:
       env: 
         MOZ_HEADLESS: 1
     - run: npm test
+    - name: Archive code coverage results
+      uses: actions/upload-artifact@v2
+      with:
+        name: geckodriver-log
+        path: geckodriver.log
