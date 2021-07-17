@@ -33,10 +33,7 @@ jobs:
       env: 
         MOZ_HEADLESS: 1
     - run: npm test
-    - name: Archive code coverage results
-      uses: actions/upload-artifact@v2
-      if: success() || failure()
-      with:
-        name: geckodriver-log
-        path: geckodriver.log
-        retention-days: 5
+    
+    - uses: actions/download-artifact@v2
+    - name: Display structure of downloaded files
+      run: ls -R
