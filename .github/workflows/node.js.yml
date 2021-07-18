@@ -37,4 +37,5 @@ jobs:
     - uses: actions/download-artifact@v2
     - name: Display structure of downloaded files
       if: success() || failure()
-      run: ls -R
+      # run: ls -R
+      run: find / -iname geckodriver.log
