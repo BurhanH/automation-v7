@@ -34,8 +34,7 @@ jobs:
         MOZ_HEADLESS: 1
     - run: npm test
     
-    - uses: actions/download-artifact@v2
-    - name: Display structure of downloaded files
-      if: success() || failure()
-      # run: ls -R
-      run: find / -iname geckodriver.log
+#     - uses: actions/download-artifact@v2
+#     - name: Display structure of downloaded files
+#       if: success() || failure()
+#       # run: ls -R
